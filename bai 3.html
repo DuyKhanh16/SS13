@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let todoList = ["Do homework at 8pm", "Go to bed at 11pm"]
+        for (let i = 0; i < todoList.length; i++) {
+            alert(todoList[i])
+        }
+        let update = prompt("you want to update the time? (y/n)")
+        if (update == "y") {
+            let time = prompt("you want to update the time homework or to bed or all")
+            if (time == "homework") {
+                let a = +prompt("Time to update")
+                let b = String(`Do homework at ${a}pm`)
+                todoList[0] = b
+            } else if (time == "to bed") {
+                let c = +prompt("Time to update")
+                let d = String(`Go to bed at ${c}pm`)
+                todoList[1] = d
+            } else if (time = "all") {
+                let a = +prompt("Time to update homework")
+                let b = String(`Do homework at ${a}pm`)
+                todoList[0] = b
+                let c = +prompt("Time to update to bed")
+                let d = String(`Go to bed at ${c}pm`)
+                todoList[1] = d
+            } else {
+                alert('print out the results')
+            }
+        } else {
+            let xoa = prompt("you want to delete y/all")
+            if (xoa == "y") {
+                let x = prompt("homework or to bed")
+                if (x == "homework") {
+                    todoList.shift()
+                } else if (x == "to bed") {
+                    todoList.pop()
+                }
+            } else if (xoa == "all") {
+                todoList.shift()
+                todoList.pop()
+            } else {
+                alert('print out the results')
+            }
+        }
+        for (let j = 0; j < todoList.length; j++) {
+            document.write(`${todoList[j]}`)
+            document.write('<br>')
+
+        }
+    </script>
+</body>
+
+</html>

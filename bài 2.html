@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=prompt('Nhập từ muốn tra')
+        let b=a.split()
+        console.log(b);
+        let english = ["how", "old", "are", "you", "i", "am", "fine", "thanks"];
+        let tiengViet= ["làm sao", "cũ", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"];
+       if (tiengViet.includes(b[0])!== -1) {
+        let c=tiengViet.indexOf(b[0])
+        console.log(c);
+           document.write(english[c])
+       } else {
+        alert('chưa biết dịch')
+       }
+    </script>
+</body>
+</html>
